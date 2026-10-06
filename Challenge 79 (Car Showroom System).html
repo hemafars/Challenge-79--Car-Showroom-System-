@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const name = "name";
+    const typecare = "BMW";
+    const carPrice = 1000000;
+    const paymentMethod = "Cash";
+    //Installment تقسيط
+    let interest12 = 0;
+    let doscount = 0
+
+    if (carPrice > 0) {
+      if (paymentMethod === "Cash") {
+        doscount = carPrice * 0.07
+      } else {
+        interest12 = carPrice * 0.12
+      }
+      if (carPrice > 800000) {
+        console.log("هدية")
+      }
+      const finalPrice = carPrice + interest12 - doscount;
+      console.log(`name : ${name}`)
+      console.log(`typecare : ${typecare}`)
+      console.log(`carPrice : ${carPrice}`)
+      console.log(`paymentMethod : ${paymentMethod}`)
+      console.log(`interest12 : ${interest12}`)
+      console.log(`doscount : ${doscount}`)
+      console.log(`finalPrice : ${finalPrice}`)
+
+    }
+
+
+
+  </script>
+</body>
+
+</html>
